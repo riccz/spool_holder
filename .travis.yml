@@ -1,0 +1,12 @@
+language: shell
+os: linux
+dist: bionic
+
+install:
+  - scripts/get_openscad.sh
+  - git clone https://github.com/revarbat/BOSL.git
+
+script:
+  - ./openscad --version
+  - OPENSCAD_BIN=./openscad xvfb-run -a make -j $(( 1 + $(nproc) ))
+

@@ -1,3 +1,4 @@
+use <BOSL/shapes.scad>;
 use <BOSL/threading.scad>;
 use <BOSL/transforms.scad>;
 
@@ -20,8 +21,9 @@ thread_slop = 0.35;
 thread_depth = thread_pitch / 4;
 thread_dia = support_dia + support_dia_tol + thread_min_width + thread_pitch;
 
+spool_holder_fillet_r = 1.5;
 spool_holder_h = 15;
-spool_holder_max_dia = 80;
+spool_holder_max_dia = 100;
 spool_holder_min_dia = 40;
 spool_holder_min_wall = 3;
 spool_holder_nut_dia = thread_dia + 2 * (thread_slop + spool_holder_min_wall);
@@ -45,7 +47,8 @@ module threaded_sleeve() {
 
 module spool_holder_basic() {
     difference() {
-        cylinder(d1=spool_holder_max_dia, d2=spool_holder_min_dia, h=spool_holder_h);
+        cyl(d1=spool_holder_max_dia, d2=spool_holder_min_dia, h=spool_holder_h,
+             fillet=spool_holder_fillet_r, center=false);
 
  	d = sqrt(2) * spool_holder_max_dia/2 - spool_holder_min_wall;
         for (i = [0:2]) rotate(120 * i, [0, 0, 1]) {

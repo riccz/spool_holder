@@ -1,17 +1,13 @@
-# Spool Holder #
+# Filament Spool Holder #
 
-This is a parametric holder for 3D-printing filament spools adapted from the
-[Quick Change Universal Spool Holder by
-Foreverwinter](https://www.thingiverse.com/thing:1241566).
+This is a 3d-printing filament spool holder inspired by the [Quick Change
+Universal Spool Holder by
+Foreverwinter](https://www.thingiverse.com/thing:1241566).  It is designed
+around the spool holder included in the [Geeetech Prusa I3 Pro
+B](http://www.geeetech.com/wiki/index.php/Acrylic_Prusa_I3_pro_B) printer, but
+can be easily adjusted to fit onto any horizontal support rod.
 
-The default parameters are tuned to integrate with the acrylic spool holder
-included in the Geeetech Prusa I3 Pro B.
-
-The default parameters should fit a wide variety of filament spools.
-
-By default the threaded sleeve fits on a rotating 20mm rod/tube.
-
-# Dependencies #
+## Dependencies ##
 
 - [BOSL](https://github.com/revarbat/BOSL)
 

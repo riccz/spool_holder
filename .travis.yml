@@ -10,3 +10,11 @@ script:
   - ./openscad --version
   - OPENSCAD_BIN=./openscad xvfb-run -a make -j $(( 1 + $(nproc) ))
 
+deploy:
+  edge: true
+  provider: releases
+  file: 
+    - "*.stl"
+    - "*.png"
+  on:
+    tags: true
